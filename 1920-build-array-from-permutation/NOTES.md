@@ -1,1 +1,1 @@
-​
+Here 'Pairing' concept is used, where in we mask or encrypt two numbers into a single number using 'a=bq+c'. And we can​ retrieve both numbers i.e, 'b' and 'c' by performing '//' and '%' respectively.
