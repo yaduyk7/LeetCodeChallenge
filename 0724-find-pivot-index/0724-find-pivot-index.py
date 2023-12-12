@@ -6,17 +6,17 @@ class Solution(object):
         """
         sum_left=0
         sum_right=0
-        sum1=0
         flag=0
-        for j in range(1,len(nums)):
-            sum_left=sum_left+nums[j]
-        for j in range(len(nums)-1):
-            sum_right=sum_right+nums[j]
+        tot_sum=sum(nums)
+        sum_left=tot_sum-nums[0]
+        sum_right=tot_sum-nums[len(nums)-1]
+
         if(sum_left==0):
             return 0
-        tot_sum=sum(nums)
+
         L_sum=0
         R_sum=0
+
         for i in range(1,len(nums)):
             L_sum=L_sum+nums[i-1]
             R_sum=tot_sum-(nums[i]+L_sum)
