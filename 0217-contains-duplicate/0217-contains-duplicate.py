@@ -4,15 +4,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-        nums.sort()
-        l=0
-        r=1
         flag=0
-        while(r<len(nums)):
-            if(nums[l]==nums[r]):
+        dict={}
+        for num in nums:
+            if num not in dict:
+                dict.update({num:1})
+            else:
+                dict.update({num:dict[num]+1})
+        for key in dict:
+            if(dict[key]!=1):
                 flag=1
-                return True
-            l+=1
-            r+=1
-        if(flag==0):
+        if(flag==1):
+            return True
+        else:
             return False
